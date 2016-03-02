@@ -12,7 +12,7 @@ Used to build Java native libraries for e.g. [jbrotli](https://github.com/meteog
 * Maven 3.3.x
 * gcc
 * g++
-* g++-arm-linux-gnueabihf (to cross compile for Raspberry Pi)
+* binutils-arm-linux-gnueabihf (to cross compile for Raspberry Pi)
 * cmake
 * git
 
