@@ -61,3 +61,4 @@ RUN cd "/tmp" && \
     # rm -rf "/usr/share/doc"
     # rm -rf "/usr/share/doc-base"
     # rm -rf "/usr/share/info/*"
+    # rm -rf "/root/.gnupg"
