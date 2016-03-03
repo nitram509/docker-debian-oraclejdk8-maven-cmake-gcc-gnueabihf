@@ -10,9 +10,9 @@ Used to build Java native libraries for e.g. [jbrotli](https://github.com/meteog
 * based on small Debian Linux image
 * Oracle Java JDK 1.8
 * Maven 3.3.x
-* gcc
-* g++
-* binutils-arm-linux-gnueabihf (to cross compile for Raspberry Pi)
 * cmake
 * git
+* gcc
+* g++
+* binutils-arm-linux-gnueabihf, crossbuild-essential-armhf (to cross compile for Raspberry Pi)
 
