@@ -18,11 +18,12 @@ RUN cd "/tmp" && \
     wget -qO- "http://emdebian.org/tools/debian/${EMDEBIAN_ARCHIVE_KEY}" > "${EMDEBIAN_ARCHIVE_KEY}" && \
     export archive_key_fingerprint=$(gpg -a --with-fingerprint "${EMDEBIAN_ARCHIVE_KEY}" | tail -n 1 | sed 's/\s*//g') && \
     if [ "${archive_key_fingerprint}" != "${EMDEBIAN_ARCHIVE_KEY_FINGERPRINT}" ]; then echo "ERROR, invalid debian archive key fingerprint. Please, verify the key."; exit 1; fi && \
-    apt-key add "$EMDEBIAN_ARCHIVE_KEY"
-    dpkg --add-architecture armhf
-    # apt-get update && \
-    # apt-get -y install git gcc g++ make cmake && \
-    # apt-get -y install crossbuild-essential-armhf binutils-arm-linux-gnueabihf
+    apt-key add "$EMDEBIAN_ARCHIVE_KEY" && \
+    dpkg --add-architecture armhf && \
+    apt-get update && \
+    apt-get -y install git gcc g++ make cmake && \
+    apt-get -y install crossbuild-essential-armhf binutils-arm-linux-gnueabihf && \
+    git clone --recursive https://github.com/MeteoGroup/jbrotli.git
     # wget --header "Cookie: oraclelicense=accept-securebackup-cookie;" \
     #     "http://download.oracle.com/otn-pub/java/jdk/${JAVA_VERSION}u${JAVA_UPDATE}-b${JAVA_BUILD}/jdk-${JAVA_VERSION}u${JAVA_UPDATE}-linux-x64.tar.gz" && \
     # tar -xzf "jdk-${JAVA_VERSION}u${JAVA_UPDATE}-linux-x64.tar.gz" && \
