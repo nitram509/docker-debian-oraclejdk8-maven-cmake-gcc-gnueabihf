@@ -3,7 +3,7 @@
 
 Used to build Java native libraries for e.g. [jbrotli](https://github.com/meteogroup/jbrotli)
 
-[![](https://badge.imagelayers.io/nitram509/debian-oraclejdk8-maven-cmake-gcc-gnueabihf:latest.svg)](https://imagelayers.io/?images=nitram509/debian-oraclejdk8-maven-cmake-gcc-gnueabihf:latest 'Get your own badge on imagelayers.io')
+[![](https://images.microbadger.com/badges/image/nitram509/debian-oraclejdk8-maven-cmake-gcc-gnueabihf.svg)](https://microbadger.com/images/nitram509/debian-oraclejdk8-maven-cmake-gcc-gnueabihf "Get your own image badge on microbadger.com")
 
 #### Image features
 
