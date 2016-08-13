@@ -1,5 +1,6 @@
 FROM docker.io/debian:jessie
 MAINTAINER Martin W. Kirst "x.nitram509@gmail.com"
+LABEL org.label-schema.vcs-url="https://github.com/nitram509/docker-debian-oraclejdk8-maven-cmake-gcc-gnueabihf"
 
 ENV JAVA_VERSION=8 \
     JAVA_UPDATE=74 \
@@ -21,7 +22,7 @@ RUN cd "/tmp" && \
     apt-key add "$EMDEBIAN_ARCHIVE_KEY" && \
     dpkg --add-architecture armhf && \
     apt-get update && \
-    apt-get -y install git gcc g++ make cmake && \
+    apt-get -y install git gcc-4.8 g++-4.8 make cmake && \
     apt-get -y install crossbuild-essential-armhf binutils-arm-linux-gnueabihf && \
     git clone --recursive https://github.com/MeteoGroup/jbrotli.git
     # wget --header "Cookie: oraclelicense=accept-securebackup-cookie;" \
