@@ -1,6 +1,10 @@
 FROM docker.io/debian:jessie
 MAINTAINER Martin W. Kirst "x.nitram509@gmail.com"
-LABEL org.label-schema.vcs-url="https://github.com/nitram509/docker-debian-oraclejdk8-maven-cmake-gcc-gnueabihf"
+LABEL org.label-schema.docker.dockerfile="/Dockerfile" \
+      org.label-schema.license="MIT" \
+      org.label-schema.url="https://github.com/nitram509/docker-debian-oraclejdk8-maven-cmake-gcc-gnueabihf" \
+      org.label-schema.vcs-type="Git" \
+      org.label-schema.vcs-url="https://github.com/nitram509/docker-debian-oraclejdk8-maven-cmake-gcc-gnueabihf.git"
 
 ENV JAVA_VERSION=8 \
     JAVA_UPDATE=74 \
